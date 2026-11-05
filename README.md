@@ -6,8 +6,8 @@ It was built as the **K Explore – Web Designing** assignment using only HTML5,
 
 ## Project Links
 
-- **GitHub repository:** _add your repository link here after creating it_
-- **Live website:** _add your deployed website link here after deployment_
+- **GitHub repository:** "https://github.com/sumit-yadav-dev/EventPulse"
+- **Live website:** "https://eventpulse.sumit142392.workers.dev/"
 
 ## Features
 
