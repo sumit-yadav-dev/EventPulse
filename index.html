@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventPulse | Discover &amp; Register for Top Events</title>
+    <meta name="description" content="EventPulse helps you discover tech, music, design, business and gaming events, follow live countdowns, and register for tickets in seconds.">
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: dark)">
+
+    <!-- Link previews (WhatsApp, Slack, LinkedIn, X, ...) -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="EventPulse">
+    <meta property="og:title" content="EventPulse | Discover &amp; Register for Top Events">
+    <meta property="og:description" content="Discover tech, music, design, business and gaming events, follow live countdowns, and register for tickets in seconds.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&amp;fit=crop&amp;w=1200&amp;h=630&amp;q=80">
+    <meta property="og:image:alt" content="A crowded conference hall during a keynote">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="EventPulse | Discover &amp; Register for Top Events">
+    <meta name="twitter:description" content="Discover tech, music, design, business and gaming events, follow live countdowns, and register for tickets in seconds.">
+
+    <!-- Favicon: SVG for modern browsers, PNG / ICO fallbacks, and the iPhone / iPad home-screen icon -->
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="images/favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="favicon.ico" sizes="48x48">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+    <!-- Open the connections to the external hosts early (the event photos come from Unsplash) -->
+    <link rel="preconnect" href="https://images.unsplash.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Google Fonts & Font Awesome Icons (Font Awesome 6.5.1 Free: 6.4.0 had no X / Twitter logo icon) -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Header Navigation -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i aria-hidden="true" class="fa-solid fa-calendar-check"></i>
+                <span>Event<span class="highlight">Pulse</span></span>
+            </a>
+            
+            <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+                <a href="#home" class="nav-link active" aria-current="location">Home</a>
+                <a href="#events" class="nav-link">Explore Events</a>
+                <a href="#my-registrations" class="nav-link">My Registrations</a>
+                <a href="#about" class="nav-link">About</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button type="button" class="theme-toggle" id="themeToggle" aria-label="Switch to dark mode">
+                    <i aria-hidden="true" class="fa-solid fa-moon"></i>
+                </button>
+                <a href="#events" class="btn btn-primary btn-sm">Browse Events</a>
+                <button type="button" class="hamburger" id="hamburger" aria-label="Main menu">
+                    <i aria-hidden="true" class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content" tabindex="-1">
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <span class="badge"><i aria-hidden="true" class="fa-solid fa-wand-magic-sparkles"></i> Experience Extraordinary Events</span>
+                <h1>Discover, Connect & Attend Unforgettable Events</h1>
+                <p>Join thousands of attendees at premier tech conferences, music festivals, design workshops, and business summits around the world.</p>
+                <div class="hero-btns">
+                    <a href="#events" class="btn btn-primary btn-lg"><i aria-hidden="true" class="fa-solid fa-compass"></i> Explore Events</a>
+                    <a href="#my-registrations" class="btn btn-outline btn-lg"><i aria-hidden="true" class="fa-solid fa-ticket"></i> View My Tickets</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">150+</span>
+                        <span class="stat-label">Live Events</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">50K+</span>
+                        <span class="stat-label">Attendees</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">4.9★</span>
+                        <span class="stat-label">User Rating</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-card-wrapper">
+                <div class="featured-preview-card" id="heroCountdownCard">
+                    <!-- Dynamic Hero Featured Event with Live Countdown -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search & Filter Controls Section -->
+    <section class="filter-section" id="events" aria-labelledby="events-heading">
+        <div class="container">
+            <div class="section-header center">
+                <h2 id="events-heading">Upcoming & Featured Events</h2>
+                <p>Find the right event for your passion, career, or hobby.</p>
+            </div>
+
+            <div class="filter-controls">
+                <div class="search-box" role="search">
+                    <label for="searchInput" class="sr-only">Search events by title, location, or keyword</label>
+                    <i aria-hidden="true" class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" id="searchInput" autocomplete="off" aria-controls="eventsGrid" placeholder="Search by event title, location, or keyword...">
+                    <button type="button" id="clearSearch" class="clear-btn" aria-label="Clear search" style="display:none;"><i aria-hidden="true" class="fa-solid fa-xmark"></i></button>
+                </div>
+
+                <div class="category-pills" id="categoryPills" role="group" aria-label="Filter events by category">
+                    <button type="button" class="pill active" data-category="all" aria-pressed="true"><i aria-hidden="true" class="fa-solid fa-border-all"></i> All Categories</button>
+                    <button type="button" class="pill" data-category="Tech" aria-pressed="false"><i aria-hidden="true" class="fa-solid fa-laptop-code"></i> Tech & AI</button>
+                    <button type="button" class="pill" data-category="Music" aria-pressed="false"><i aria-hidden="true" class="fa-solid fa-music"></i> Music & Arts</button>
+                    <button type="button" class="pill" data-category="Design" aria-pressed="false"><i aria-hidden="true" class="fa-solid fa-palette"></i> Design & UX</button>
+                    <button type="button" class="pill" data-category="Business" aria-pressed="false"><i aria-hidden="true" class="fa-solid fa-briefcase"></i> Business & Finance</button>
+                    <button type="button" class="pill" data-category="Gaming" aria-pressed="false"><i aria-hidden="true" class="fa-solid fa-gamepad"></i> Gaming & Esports</button>
+                </div>
+            </div>
+
+            <!-- Event Cards Grid -->
+            <p class="sr-only" id="resultsStatus" role="status" aria-live="polite" aria-atomic="true"></p>
+            <div class="events-grid" id="eventsGrid" aria-label="Events">
+                <!-- Dynamically Rendered Event Cards -->
+            </div>
+
+            <!-- Empty State -->
+            <div class="empty-state hidden" id="noEventsState">
+                <i aria-hidden="true" class="fa-solid fa-calendar-xmark"></i>
+                <h3>No Events Found</h3>
+                <p>We couldn't find any events matching your search criteria. Try resetting filters.</p>
+                <button type="button" class="btn btn-secondary" id="resetFiltersBtn">Reset Filters</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- My Registrations / Tickets Section -->
+    <section class="registrations-section" id="my-registrations" aria-labelledby="registrations-heading">
+        <div class="container">
+            <div class="section-header">
+                <h2 id="registrations-heading"><i aria-hidden="true" class="fa-solid fa-ticket-simple highlight"></i> Your Registered Events</h2>
+                <p>Manage your registrations stored securely in your local browser session.</p>
+            </div>
+            <div id="registrationsList" class="registrations-grid">
+                <!-- Dynamically populated from LocalStorage -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about" aria-labelledby="about-heading">
+        <div class="container about-container">
+            <div class="about-text">
+                <h2 id="about-heading">Empowering Seamless Event Exploration</h2>
+                <p>EventPulse is designed to offer intuitive, fast, and accessible event registration for professionals, creators, and enthusiasts. Built with modern web standards and responsive layout engineering.</p>
+                <ul class="features-list">
+                    <li><i aria-hidden="true" class="fa-solid fa-circle-check"></i> Instant LocalStorage Registration Management</li>
+                    <li><i aria-hidden="true" class="fa-solid fa-circle-check"></i> Real-time Client-Side Form Validation</li>
+                    <li><i aria-hidden="true" class="fa-solid fa-circle-check"></i> Live Interactive Countdown Timers</li>
+                    <li><i aria-hidden="true" class="fa-solid fa-circle-check"></i> Light & Dark Theme Support</li>
+                </ul>
+            </div>
+            <div class="about-banner">
+                <div class="glass-card">
+                    <i aria-hidden="true" class="fa-solid fa-shield-halved"></i>
+                    <h3>Verified Event Organizers</h3>
+                    <p>All listed events are curated and verified to ensure top-tier quality and safety.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">
+                    <i aria-hidden="true" class="fa-solid fa-calendar-check"></i>
+                    <span>Event<span class="highlight">Pulse</span></span>
+                </a>
+                <p>Your ultimate destination to discover and register for leading global events.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <a href="#home">Home</a>
+                <a href="#events">Browse Events</a>
+                <a href="#my-registrations">My Tickets</a>
+                <a href="#about">About Us</a>
+            </div>
+            <div class="footer-social">
+                <h4>Connect With Us</h4>
+                <div class="social-icons">
+                    <a href="https://github.com/sumit-yadav-dev" aria-label="GitHub"><i aria-hidden="true" class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 EventPulse. Built with HTML5, CSS3 & JavaScript.</p>
+        </div>
+    </footer>
+
+    <!-- Event Detail & Registration Modal -->
+    <div class="modal-overlay" id="eventModal" inert>
+        <div class="modal-content" id="modalContent" role="dialog" aria-modal="true" aria-labelledby="modalTitle" tabindex="-1">
+            <button type="button" class="modal-close" id="modalCloseBtn" aria-label="Close dialog"><svg aria-hidden="true" focusable="false" viewBox="0 0 16 16" width="16" height="16"><path d="M2 2l12 12M14 2L2 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+            <div class="modal-body" id="modalBody">
+                <!-- Dynamically populated event detail and form -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification Toast -->
+    <div class="toast hidden" id="toast" aria-hidden="true">
+        <i aria-hidden="true" class="fa-solid fa-circle-check" id="toastIcon"></i>
+        <span id="toastMessage">Action completed successfully!</span>
+    </div>
+
+    <!-- Screen-reader announcements (toast messages are repeated here) -->
+    <div class="sr-only" id="liveRegion" role="status" aria-live="polite" aria-atomic="true"></div>
+
+    <script src="js/eventsData.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

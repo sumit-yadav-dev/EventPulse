@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" preserveAspectRatio="xMidYMid slice" role="img" aria-label="EventPulse event placeholder">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4338ca"/>
+      <stop offset="1" stop-color="#6366f1"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="400" fill="url(#bg)"/>
+  <circle cx="400" cy="200" r="190" fill="url(#glow)"/>
+  <!-- Everything important stays inside the middle band (y 120-280) so it survives the wide crop used in the event dialog -->
+  <g fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" opacity="0.92">
+    <rect x="340" y="140" width="120" height="110" rx="14" stroke-width="7"/>
+    <line x1="340" y1="172" x2="460" y2="172" stroke-width="7"/>
+    <line x1="372" y1="126" x2="372" y2="150" stroke-width="7"/>
+    <line x1="428" y1="126" x2="428" y2="150" stroke-width="7"/>
+    <polyline points="356,214 380,214 391,192 406,236 418,214 444,214" stroke-width="7"/>
+  </g>
+</svg>
